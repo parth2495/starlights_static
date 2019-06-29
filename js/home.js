@@ -20,7 +20,7 @@ $("#comment-form").submit(function(e) {
         XHR.open('POST', 'https://hidden-bayou-29194.herokuapp.com/api/blogMail',false);
 
         XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        XHR.setRequestHeader("Origin", 'http://localhost:4200');
+        
         console.log($(this).serialize());
         XHR.send($(this).serialize());
 
