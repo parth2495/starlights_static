@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-$("#comment-form").submit(function(e) {
+  $("#comment-form").submit(function(e) {
       
 
       var name = document.getElementById("name");
@@ -20,7 +20,7 @@ $("#comment-form").submit(function(e) {
         XHR.open('POST', 'https://hidden-bayou-29194.herokuapp.com/api/blogMail',false);
 
         XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        
+
         console.log($(this).serialize());
         XHR.send($(this).serialize());
 
@@ -43,4 +43,48 @@ $("#comment-form").submit(function(e) {
         // console.log("HERE");
       }
   }); 
+
+  $("#contactForm").submit(function(e) {
+      
+
+      var name = document.getElementById("name");
+      var email = document.getElementById("email");
+      var msg_subject = document.getElementById("msg_subject");
+      // var message = document.getElementById("message");
+      console.log(name.value);
+      console.log(email.value);
+      console.log(msg_subject.value);  
+      if(!name.value || !email.value || !msg_subject.value) {
+        alert("Please complete a form");
+      }
+      else
+      {
+        var XHR = new XMLHttpRequest();
+        
+        XHR.open('POST', 'https://hidden-bayou-29194.herokuapp.com/api/blogMail',false);
+
+        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        console.log($(this).serialize());
+        XHR.send($(this).serialize());
+
+        XHR.addEventListener('load', function(event) {
+          alert('Yeah! Data sent and response loaded.');
+        });
+
+    
+        XHR.addEventListener('error', function(event) {
+          alert('Oops! Something went wrong.');
+        });
+        // $.ajax({
+        //   type: "POST",
+        //   url: "https://hidden-bayou-29194.herokuapp.com/api/blogMail",
+        //   data: $(this).serialize(),
+        //   success: function() {
+        //      alert('success');
+        //   }
+        // });
+        // console.log("HERE");
+      }
+  });
 });
