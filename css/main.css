@@ -1427,7 +1427,7 @@ button:focus {
       font-size: 14px;
       font-style: italic;
       height: 38px; }
-    #footer-Content .widget .subscribe-area span i {
+    #footer-Content .widget .subscribe-area button i {
       position: absolute;
       right: 0;
       width: 60px;
@@ -1439,6 +1439,12 @@ button:focus {
       padding: 9px 20px;
       font-size: 18px;
       border-radius: 0px 4px 4px 0px; }
+
+    #footer-Content .widget .subscribe-area button {
+      background-color: Transparent;
+      border: none;
+    }  
+
   #footer-Content h3.block-title {
     color: #fff;
     font-size: 20px;

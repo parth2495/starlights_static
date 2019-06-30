@@ -4,13 +4,13 @@ $(document).ready(function() {
       
 
       var name = document.getElementById("name");
-      var Email = document.getElementById("Email");
-      var Website = document.getElementById("Website");
+      var email = document.getElementById("email");
+      var website = document.getElementById("website");
       var message = document.getElementById("message");
       console.log(name.value);
-      console.log(Email.value);
-      console.log(Website.value);  
-      if(!name.value || !Email.value || !Website.value) {
+      console.log(email.value);
+      console.log(website.value);  
+      if(!name.value || !email.value || !website.value) {
         alert("Please complete a form");
       }
       else
@@ -87,4 +87,45 @@ $(document).ready(function() {
         // console.log("HERE");
       }
   });
+
+  $("#subscribeForm").submit(function(e) {
+      
+
+      
+      var email = document.getElementById("email");
+      console.log(email.value);
+      if(!email.value) {
+        alert("Please complete a form");
+      }
+      else
+      {
+        var XHR = new XMLHttpRequest();
+        
+        XHR.open('POST', 'https://hidden-bayou-29194.herokuapp.com/api/blogMail',false);
+
+        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        console.log($(this).serialize());
+        XHR.send($(this).serialize());
+
+        XHR.addEventListener('load', function(event) {
+          alert('Yeah! Data sent and response loaded.');
+        });
+
+    
+        XHR.addEventListener('error', function(event) {
+          alert('Oops! Something went wrong.');
+        });
+        // $.ajax({
+        //   type: "POST",
+        //   url: "https://hidden-bayou-29194.herokuapp.com/api/blogMail",
+        //   data: $(this).serialize(),
+        //   success: function() {
+        //      alert('success');
+        //   }
+        // });
+        // console.log("HERE");
+      }
+  });
+
 });
