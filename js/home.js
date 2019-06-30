@@ -92,9 +92,11 @@ $(document).ready(function() {
       
 
       
-      var email = document.getElementById("email");
-      console.log(email.value);
-      if(!email.value) {
+      var subscribe = document.getElementById("subscribe");
+
+      console.log($(this).serialize());
+      console.log(subscribe.value);
+      if(!subscribe.value) {
         alert("Please complete a form");
       }
       else
