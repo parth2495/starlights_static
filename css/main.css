@@ -1464,3 +1464,23 @@ button:focus {
       -webkit-transition: all 300ms;
       -o-transition: all 300ms;
       transition: all 300ms; }
+  
+  
+
+   
+  ul.icons {
+      cursor: default;
+      list-style: none;
+      padding-left: 0;
+  }
+
+  ul.icons li {
+      display: inline-block;
+      padding: 0 0.3em 0 0;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }  
+
+ 
