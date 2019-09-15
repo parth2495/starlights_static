@@ -334,6 +334,28 @@ button:focus {
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
+
+.block-27 ul {
+  padding: 0;
+  margin: 20px 0 20px 0; }
+  .block-27 ul li {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-weight: 400; }
+    .block-27 ul li a, .block-27 ul li span {
+      box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+      text-align: center;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%; }
+    .block-27 ul li.active a, .block-27 ul li.active span {
+      background: #5533ff;
+      background: linear-gradient(95deg, #402480 40%, #CC0044 100%);
+  
+      color: #fff;
+      border: 1px solid transparent; }    
 /* ========================================================================== 
    Scroll To Up 
    ========================================================================== */
