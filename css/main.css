@@ -1118,9 +1118,19 @@ button:focus {
       -webkit-transition: all .8s ease;
       transition: all .8s ease;
       border-color: #3ecf8e; }
+    #blog .blog-item-img .img{
+    
+    height: 200px;
+    width: 200px;    
+     }
+    @media (max-width: 767.98px) {
+    #blog .blog-item-img {
+        margin: 0 auto;
+        margin-bottom: 20px; } }
     #blog .blog-item-wrapper:hover h3 a {
       color: #3ecf8e; }
     #blog .blog-item-wrapper .blog-item-text {
+      position: relative;
       padding: 26px 30px 30px 30px; }
     #blog .blog-item-wrapper h3 {
       font-size: 20px;
@@ -1144,19 +1154,19 @@ button:focus {
       font-size: 10px;
       position: absolute;
       top: 3px; }
-    #blog .blog-item-wrapper .author {
+    #blog .author {
       border-top: 1px solid #ddd;
       padding: 18px 30px 35px 30px; }
-    #blog .blog-item-wrapper span.name a {
+    #blog span.name a {
       color: #5e629c;
       font-size: 14px; }
-    #blog .blog-item-wrapper span.name i {
+    #blog span.name i {
       color: #3ecf8e;
       margin-right: 5px; }
-    #blog .blog-item-wrapper span.date a {
+    #blog span.date a {
       color: #5e629c;
       font-size: 14px; }
-    #blog .blog-item-wrapper span.date i {
+    #blog span.date i {
       color: #3ecf8e;
       margin-right: 5px; }
 
@@ -1218,6 +1228,8 @@ button:focus {
     #blog2 .blog-item-wrapper span.date i {
       color: #ff704f;
       margin-right: 5px; }
+
+
 
 /* ==========================================================================
    Blog single post section
